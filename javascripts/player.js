@@ -3,7 +3,7 @@
 /*
   TODO: Modularize this code with IIFE or Browserify
  */
-var Gauntlet = Gauntlet || {};
+var Gauntlet =(function(Gauntlet){ 
 Gauntlet.Combatants = {};
 
 /*
@@ -89,6 +89,29 @@ Gauntlet.Combatants.Monster = function() {
   this.intelligence = this.intelligence -20;
   this.strength = this.strength + 30;
 };
+Gauntlet.Combatants.Orc = function() {
+  this.health = this.health + 20;
+  this.species = "Orc";
+  this.allowedClasses = ["Warrior", "Berserker", "Shaman"];
+
+  this.generateClass = function() {
+    // Get a random index from the allowed classes array
+    var random = Math.round(Math.random() * (this.allowedClasses.length - 1));
+
+    // Get the string at the index
+    var randomClass = this.allowedClasses[random];
+
+    // Composes the corresponding player class into the player object
+    this.class = new Gauntlet.GuildHall[randomClass]();
+    return this.class;
+  };
+};
+Gauntlet.Combatants.Orc.prototype = new Gauntlet.Combatants.Player();
 
 Gauntlet.Combatants.Monster.prototype = new Gauntlet.Combatants.Player();
+console.log(Gauntlet.Combatants.Player)
+console.log(Gauntlet.Combatants.Monster)
 
+return Gauntlet;
+
+})(Gauntlet || {});
