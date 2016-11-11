@@ -7,9 +7,13 @@
   <link href='https://fonts.googleapis.com/css?family=Lato:400,300,700' rel='stylesheet' type='text/css'>
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
   <link rel="stylesheet" type="text/css" href="styles/gauntlet.css">
+  <!-- <link href='http://fonts.googleapis.com/css?family=Lato:300,400,700' rel='stylesheet' type='text/css'> -->
 </head>
 
 <body>
+  <div id='stars'></div>
+  <div id='stars2'></div>
+  <div id='stars3'></div>
   <article id="game-container">
     <section id="player-setup" class="card card--name">
       <div class="card__prompt">
@@ -72,7 +76,7 @@
       <div class="card__button">
         <a class="card__link btn btn--big btn--orange" href="#" next="card--weapon">
           <span class="btn__prompt">></span>
-          <span class="btn__text">Select weapon</span>
+          <span class="btn__text" type="button">Select weapon</span>
         </a>
       </div>
     </section>
@@ -124,7 +128,41 @@
         </a>
       </div>
     </section>
-    <section id="battleground" class="card card--battleground"></section>
+    <!-- BATTLEGROUND PAGE -->
+    <section id="battleground" class="card card--battleground">
+      <div id='title' class='blink blink-furiously blink-5'>
+        <br>
+        <span>
+
+SPACE NINJAS BATTLE!!
+
+  </span>
+      </div>
+      <div class="playercard">
+        <div class="card-block">
+          <h4 class="card-title">Drew</h4>
+          <h5 class="card-subtitle text-muted">Black Space Ninja</h5>
+          <p class="card-text">Weapon: Sword</p>
+          <p class="card-text">Health: 140</p>
+          <p class="card-text">Special: 100</p>
+        </div>
+        <img src="/images/Ninja.png" alt="Card image">
+      </div>
+      </div>
+      <div class="playercard2">
+        <div class="card-block">
+          <h4 class="card-title">Mark</h4>
+          <h5 class="card-subtitle text-muted">Black Space Ninja</h5>
+          <p class="card-text">Weapon: Dagger</p>
+          <p class="card-text">Health: 80</p>
+          <p class="card-text">Special: 200</p>
+        </div>
+        <img src="/images/Ninja-Free-Download-PNG.png" alt="Card image">
+        <div class="card__button">
+          <a id="play_button" class="btn btn--sm btn--orange" href="#" next="#">Attack!
+          </a>
+        </div>
+      </div>
   </article>
   <script src="http://code.jquery.com/jquery-1.11.2.min.js"></script>
   <script src="javascripts/classes.js"></script>
