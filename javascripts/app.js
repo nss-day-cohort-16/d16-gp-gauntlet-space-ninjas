@@ -17,6 +17,25 @@ var Gauntlet = (function(Gauntlet) {
   /*
     Test code to generate a spell
    */
+  
+  var newPlay = new Gauntlet.Combatants.Player();
+
+///////////////////////////////--- EVENT LISTENERS --/////////////////////////////////
+  $(".Warrior").click( function(event) {
+    newPlay.setClass(event.target.id);
+    // var idValue = event.target.id;
+    // console.log("id", event.target.id);
+    // console.log("newPlay Case 1", newPlay);
+    // newPlay = Gauntlet.Guildhall.idValue();
+  });
+
+  $(".weaponDiv").click( function(event) {
+    newPlay.setWeapon(event.target.id);
+    // var classId = event.target.id;
+    // console.log("id", event.target.id);
+    // console.log("newPlay Case 1", newPlay);
+  });
+
   var spell = new Gauntlet.SpellBook.Sphere();
   console.log("spell: ", spell.toString());
   console.log("Gauntlet: ", Gauntlet);
@@ -59,8 +78,7 @@ var Gauntlet = (function(Gauntlet) {
 
       switch (nextCard) {
         case "card--class":
-          var newPlay = $("#checkout").val();
-          newPlay = new Gauntlet.Combatants.Player();
+        newPlay.playerName = $("#checkout").val();
           moveAlong = ($("#player-name").val() !== "");
           break;
         case "card--weapon":
@@ -70,7 +88,7 @@ var Gauntlet = (function(Gauntlet) {
           moveAlong = ($("#player-name").val() !== "");
           break;
       }
-      console.log(newPlay)
+      console.log("newPlay", newPlay);
 
       if (moveAlong) {
         $(".card").hide();
