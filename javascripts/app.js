@@ -59,6 +59,8 @@ var Gauntlet = (function(Gauntlet) {
 
       switch (nextCard) {
         case "card--class":
+          var newPlay = $("#checkout").val();
+          newPlay = new Gauntlet.Combatants.Player();
           moveAlong = ($("#player-name").val() !== "");
           break;
         case "card--weapon":
@@ -68,6 +70,7 @@ var Gauntlet = (function(Gauntlet) {
           moveAlong = ($("#player-name").val() !== "");
           break;
       }
+      console.log(newPlay)
 
       if (moveAlong) {
         $(".card").hide();

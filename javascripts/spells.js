@@ -33,7 +33,11 @@ var Gauntlet = (function(Gauntlet) {
     var random = Math.round(Math.random() * (this.damageTypes.length - 1));
     this.type = this.damageTypes[random];
   };
+  
   Gauntlet.SpellBook.Sphere.prototype = new Gauntlet.SpellBook.Spell();
+  console.log(Gauntlet.SpellBook.Sphere)
 
+  var fire = new Gauntlet.SpellBook.Sphere();
+console.log(fire);
   return Gauntlet;
 })(Gauntlet || {});
