@@ -15,7 +15,7 @@ var Gauntlet = (function(Gauntlet) {
     this.class = null;
     this.weapon = null;
 
-    this.playerName = name || "unknown adventurer";
+    this.playerName = $('#checkout').val();
     this.health = Math.floor(Math.random() * 40 + 50);
     this.limbs = ["head", "neck", "arm", "leg", "torso"];
     this.skinColor = "gray";
@@ -109,8 +109,7 @@ var Gauntlet = (function(Gauntlet) {
   Gauntlet.Combatants.Orc.prototype = new Gauntlet.Combatants.Player();
 
   Gauntlet.Combatants.Monster.prototype = new Gauntlet.Combatants.Player();
-  console.log(Gauntlet.Combatants.Player)
-  console.log(Gauntlet.Combatants.Monster)
+  
 
   return Gauntlet;
 
