@@ -41,6 +41,11 @@ var Gauntlet = (function(Gauntlet) {
       console.log("newPlay-Case: Thief", newPlay);
       // newPlay.class = Gauntlet.GuildHall.allowedClasses[Warrior];
         break;
+      case "surprise-me-class":
+      newPlay.generateClass();
+      console.log("newPlay-Case: Random Class", newPlay);
+      // newPlay.class = Gauntlet.GuildHall.allowedClasses[Warrior];
+        break;
     };
   });
 
@@ -62,6 +67,11 @@ var Gauntlet = (function(Gauntlet) {
       case "War-Axe":
       newPlay.weapon = new WarAxe();
       console.log("newPlay-Case: War-Axe", newPlay);
+        break;
+      case "surprise-me-weapon":
+      newPlay.setWeapon(new BroadSword()); //---------------------------> Need to create generateWeapon(); 
+      console.log("newPlay-Case: Random Weapon", newPlay); 
+      // newPlay.class = Gauntlet.GuildHall.allowedClasses[Warrior];
         break;
     };
   });
