@@ -56,12 +56,12 @@ var Gauntlet = (function(Gauntlet) {
   Gauntlet.GuildHall.Berserker.prototype = new Gauntlet.GuildHall.Fighter();
 
 
-  Gauntlet.GuildHall.Monk = function() {
-    this.name = "Monk";
+  Gauntlet.GuildHall.Thief = function() {
+    this.name = "Thief";
     this.healthBonus = this.healthBonus + 10;
-    this.strengthBonus = this.strengthBonus + 40;
+    this.strengthBonus = this.strengthBonus + 10;
   };
-  Gauntlet.GuildHall.Monk.prototype = new Gauntlet.GuildHall.Fighter();
+  Gauntlet.GuildHall.Thief.prototype = new Gauntlet.GuildHall.Fighter();
 
 
   /*
