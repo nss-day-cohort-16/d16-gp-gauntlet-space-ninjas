@@ -35,9 +35,9 @@ var Gauntlet = (function(Gauntlet) {
   };
   
   Gauntlet.SpellBook.Sphere.prototype = new Gauntlet.SpellBook.Spell();
-  console.log(Gauntlet.SpellBook.Sphere)
+  // console.log(Gauntlet.SpellBook.Sphere)
 
   var fire = new Gauntlet.SpellBook.Sphere();
-console.log(fire);
+// console.log(fire);
   return Gauntlet;
 })(Gauntlet || {});
