@@ -47,7 +47,7 @@ var Gauntlet = (function(Gauntlet) {
         console.log("newPlay-Case: Random Class", newPlay);
         // newPlay.class = Gauntlet.GuildHall.allowedClasses[Warrior];
         break;
-    };
+    }
   });
 
   //------------------------------ ADD WEAPON ----------------------------------//
@@ -74,7 +74,7 @@ var Gauntlet = (function(Gauntlet) {
         console.log("newPlay-Case: Random Weapon", newPlay);
         // newPlay.class = Gauntlet.GuildHall.allowedClasses[Warrior];
         break;
-    };
+    }
   });
 
   //------------------------------- SPELL STUFF ------------------------------------//
@@ -121,7 +121,7 @@ var Gauntlet = (function(Gauntlet) {
                                       <p class="card-text">Weapon: ${newPlay.weapon}</p>
                                       <p class="card-text">Weapon Damage: ${newPlay.weapon.damage}</p>
                                       <p class="card-text playerHealth">Health: ${newPlay.health}</p>
-                                      </div> <img src="/images/Ninja.png" alt="Card image">`)
+                                      </div> <img src="/images/Ninja.png" alt="Card image">`);
 
             //----------------------------------- Adding Enemy Card to DOM ------------------------------------//
           $('.playercard2').append(`<div class="card-block">
@@ -130,11 +130,11 @@ var Gauntlet = (function(Gauntlet) {
                                       <p class="card-text">Weapon: ${orc.weapon}</p>
                                       <p class="card-text">Weapon Damage: ${orc.weapon.damage}</p>
                                       <p class="card-text orcHealth">Health: ${orc.health}</p>
-                                      </div> <img src="/images/Ninja-Free-Download-PNG.png" alt="Card image">`)
+                                      </div> <img src="/images/Ninja-Free-Download-PNG.png" alt="Card image">`);
 
             //------------------------------ Function for Deducting Health ---------------------------//          
           $('#play_button').click(function() {
-            console.log("something")
+            console.log("something");
             if (event) {
               newPlay.health = (newPlay.health) - (orc.weapon.damage);
               $(".playerHealth").html("Health: " + newPlay.health);
@@ -159,7 +159,7 @@ var Gauntlet = (function(Gauntlet) {
               }
             }
 
-          })
+          });
           break;
       }
       console.log("newPlay Value when next page btn click", newPlay);
@@ -180,6 +180,6 @@ var Gauntlet = (function(Gauntlet) {
     });
 
   });
-  return Gauntlet
+  return Gauntlet;
 
 })(Gauntlet || {});
