@@ -266,4 +266,13 @@ p.card-text {
   top: 20%;
   left: 40%; }
 
+#playerWins {
+  text-align: center;
+  font-size: 1.75em;
+  background-color: white;
+  color: black;
+  position: relative;
+  z-index:9;
+}
+
 /*# sourceMappingURL=gauntlet.css.map */
