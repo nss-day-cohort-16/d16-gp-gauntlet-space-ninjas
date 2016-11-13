@@ -135,19 +135,26 @@ var Gauntlet = (function(Gauntlet) {
           $('#play_button').click(function() {
             console.log("something")
             if (event) {
-              newPlay.health = (newPlay.health) - (orc.weapon.damage)
-              $(".playerHealth").html("Health:" + newPlay.health);
-              orc.health = (orc.health) - (newPlay.weapon.damage)
-              $(".orcHealth").html("Health:" + orc.health);
+              newPlay.health = (newPlay.health) - (orc.weapon.damage);
+              $(".playerHealth").html("Health: " + newPlay.health);
+
+              orc.health = (orc.health) - (newPlay.weapon.damage);
+              $(".orcHealth").html("Health: " + orc.health);
               // console.log("Player:" + newPlay.health, "Orc:" + orc.health)
-              if (newPlay.health <= 0) {
+
+              if (newPlay.health <= 0 && orc.health > newPlay.health) {
                 $('#play_button').unbind().disabled = true;
                 $("#playerWins").html("K.O.! ORC WINS!");
-                $(".playerHealth").html("Health: 0");
-              } else if (orc.health <= 0) {
+                // $(".playerHealth").html("Health: 0");
+                // orc.health = (orc.health) + (newPlay.weapon.damage);
+                // $(".orcHealth").html("Health: " + orc.health);
+
+              } else if (orc.health <= 0 && newPlay.health > orc.health) {
                 $('#play_button').unbind().disabled = true;
                 $("#playerWins").html("K.O.! " + newPlay.playerName + " WINS!");
-                $(".orcHealth").html("Health: 0");
+                // $(".orcHealth").html("Health: 0");
+                // newPlay.health = (newPlay.health) + (orc.weapon.damage);
+                // $(".playerHealth").html("Health: " + newPlay.health);
               }
             }
 
