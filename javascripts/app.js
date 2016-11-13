@@ -11,7 +11,8 @@ var Gauntlet = (function(Gauntlet) {
   //---------------- BAD GUY --------------------//
   var orc = new Gauntlet.Combatants.Orc();
   orc.generateClass();
-  orc.setWeapon(new BroadSword());
+  orc.name = "Randal";
+  orc.setWeapon(new nightBlade());
   // console.log(orc.toString());
 
   /*
@@ -27,17 +28,17 @@ var Gauntlet = (function(Gauntlet) {
     // newPlay.setClass(idValue);
     // console.log("id", idValue);
     switch (idValue) {
-      case "Warrior":
-        newPlay.class = new Gauntlet.GuildHall.Warrior();
-        console.log("newPlay-Case: Warrior", newPlay);
+      case "Shinobi":
+        newPlay.class = new Gauntlet.GuildHall.Shinobi();
+        console.log("newPlay-Case: Shinobi", newPlay);
         // newPlay.class = Gauntlet.GuildHall.allowedClasses[0];
         break;
-      case "Wizard":
-        newPlay.class = new Gauntlet.GuildHall.Wizard();
-        console.log("newPlay-Case: Wizard", newPlay);
+      case "Shinsengumi":
+        newPlay.class = new Gauntlet.GuildHall.Shinsengumi();
+        console.log("newPlay-Case: Shinsengumi", newPlay);
         break;
-      case "Thief":
-        newPlay.class = new Gauntlet.GuildHall.Thief();
+      case "Kōga":
+        newPlay.Kōga = new Gauntlet.GuildHall.Kōga();
         console.log("newPlay-Case: Thief", newPlay);
         // newPlay.class = Gauntlet.GuildHall.allowedClasses[Warrior];
         break;
@@ -54,22 +55,22 @@ var Gauntlet = (function(Gauntlet) {
     var idValue = event.target.id;
     // newPlay.setWeapon(idValue);
     switch (idValue) {
-      case "Dagger":
-        newPlay.weapon = new Dagger();
-        console.log("newPlay-Case: Dagger", newPlay);
+      case "Throwing Star":
+        newPlay.weapon = new throwingStar();
+        console.log("newPlay-Case: Throwing Star", newPlay);
         // newPlay.setWeapon(new Dagger());
         break;
-      case "Broad Sword":
-        newPlay.weapon = new BroadSword();
-        console.log("newPlay-Case: BSword", newPlay);
+      case "Night Blade":
+        newPlay.weapon = new nightBlade();
+        console.log("newPlay-Case: Night Blade", newPlay);
         // newPlay.setWeapon(new BroadSword());
         break;
-      case "War-Axe":
-        newPlay.weapon = new WarAxe();
-        console.log("newPlay-Case: War-Axe", newPlay);
+      case "Dual Blades":
+        newPlay.weapon = new dualBlades();
+        console.log("newPlay-Case: Dual Blades", newPlay);
         break;
       case "surprise-me-weapon":
-        newPlay.setWeapon(new BroadSword()); //---------------------------> Need to create generateWeapon(); 
+        newPlay.setWeapon(new nightBlade()); //---------------------------> Need to create generateWeapon(); 
         console.log("newPlay-Case: Random Weapon", newPlay);
         // newPlay.class = Gauntlet.GuildHall.allowedClasses[Warrior];
         break;

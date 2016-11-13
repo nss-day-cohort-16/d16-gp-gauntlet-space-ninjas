@@ -10,23 +10,23 @@ var Weapon = function() {
   };
 };
 
-var Dagger = function() {
-  this.name = "dagger";
-  this.damage = 4;
+var throwingStar = function() {
+  this.name = "Throwing Star";
+  this.damage = 9;
   this.hands = 1;
 };
-Dagger.prototype = new Weapon();
+throwingStar.prototype = new Weapon();
 
-var BroadSword = function() {
-  this.name = "broad sword";
-  this.damage = 14;
+var nightBlade= function() {
+  this.name = "Night Blade";
+  this.damage = 17;
   this.hands = 2;
 };
-BroadSword.prototype = new Weapon();
+nightBlade.prototype = new Weapon();
 
-var WarAxe = function() {
-  this.name = "war axe";
-  this.damage = 18;
+var dualBlades= function() {
+  this.name = "Dual Blades";
+  this.damage =19 ;
   this.hands = 2;
 };
-WarAxe.prototype = new Weapon();
+dualBlades.prototype = new Weapon();

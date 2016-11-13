@@ -32,12 +32,12 @@ var Gauntlet = (function(Gauntlet) {
   Gauntlet.GuildHall.Fighter.prototype = new Gauntlet.GuildHall.PlayerClass();
 
 
-  Gauntlet.GuildHall.Warrior = function() {
-    this.name = "Warrior";
+  Gauntlet.GuildHall.Shinobi = function() {
+    this.name = "Shinobi";
     this.healthBonus = this.healthBonus + 25;
     this.strengthBonus = this.strengthBonus + 30;
   };
-  Gauntlet.GuildHall.Warrior.prototype = new Gauntlet.GuildHall.Fighter();
+  Gauntlet.GuildHall.Shinobi.prototype = new Gauntlet.GuildHall.Fighter();
 
 
   Gauntlet.GuildHall.Valkyrie = function() {
@@ -56,12 +56,12 @@ var Gauntlet = (function(Gauntlet) {
   Gauntlet.GuildHall.Berserker.prototype = new Gauntlet.GuildHall.Fighter();
 
 
-  Gauntlet.GuildHall.Thief = function() {
-    this.name = "Thief";
+  Gauntlet.GuildHall.Koga = function() {
+    this.name = "Koga";
     this.healthBonus = this.healthBonus + 10;
     this.strengthBonus = this.strengthBonus + 10;
   };
-  Gauntlet.GuildHall.Thief.prototype = new Gauntlet.GuildHall.Fighter();
+  Gauntlet.GuildHall.Koga.prototype = new Gauntlet.GuildHall.Fighter();
 
 
   /*
@@ -90,13 +90,13 @@ var Gauntlet = (function(Gauntlet) {
   Gauntlet.GuildHall.Shaman.prototype = new Gauntlet.GuildHall.Mage();
 
 
-  Gauntlet.GuildHall.Wizard = function() {
-    this.name = "Wizard";
+  Gauntlet.GuildHall.Shinsengumi = function() {
+    this.name = "Shinsengumi";
     this.healthBonus = this.healthBonus - 15;
     this.strengthBonus = this.strengthBonus - 25;
     this.intelligenceBonus = this.intelligenceBonus + 40;
   };
-  Gauntlet.GuildHall.Wizard.prototype = new Gauntlet.GuildHall.Mage();
+  Gauntlet.GuildHall.Shinsengumi.prototype = new Gauntlet.GuildHall.Mage();
 
 
   Gauntlet.GuildHall.Conjurer = function() {
