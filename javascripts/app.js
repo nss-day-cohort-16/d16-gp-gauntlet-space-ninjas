@@ -87,7 +87,6 @@ var Gauntlet = (function(Gauntlet) {
   // console.log("spell: ", spell.toString());
   // console.log("Gauntlet: ", Gauntlet);
 
-console.log(orc)
   //------------------------------ SHOW PAGES - CLICK TO NEXT PAGE -----------------------------//
   $(document).ready(function() {
     /*
