@@ -339,6 +339,6 @@ p.card-text {
   font-size: 1.75em;
   background-color: white;
   color: black;
-  margin-top: 1%;
-  margin-bottom: 1%;
+  position: relative;
+  z-index:9;
 }
