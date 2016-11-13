@@ -113,6 +113,36 @@ var Gauntlet = (function(Gauntlet) {
           break;
         case "card--battleground":
           moveAlong = ($("#player-name").val() !== "");
+          ////////////////////////////Adding player Card to DOM///////////////////////////////////////////////////////////
+          $('.playercard').append(`<div class="card-block">
+                                      <h4 class="card-title">${newPlay.playerName}</h4>
+                                      <h5 class="card-subtitle text-muted">Class: ${newPlay.class}</h5>
+                                      <p class="card-text">Weapon: ${newPlay.weapon}</p>
+                                      <p class="card-text">Weapon Damage: ${newPlay.weapon.damage}</p>
+                                      <p class="card-text">Health: ${newPlay.health}</p>
+                                      </div> <img src="/images/Ninja.png" alt="Card image">`)
+////////////////////////////Adding Enemy Card to DOM///////////////////////////////////////////////////////////
+          
+          $('.playercard2').append(`<div class="card-block">
+                                      <h4 class="card-title">${orc.playerName}</h4>
+                                      <h5 class="card-subtitle text-muted">Class: ${orc.class}</h5>
+                                      <p class="card-text">Weapon: ${orc.weapon}</p>
+                                      <p class="card-text">Weapon Damage: ${orc.weapon.damage}</p>
+                                      <p class="card-text">Health: ${orc.health}</p>
+                                      </div> <img src="/images/Ninja-Free-Download-PNG.png" alt="Card image">`)
+/////////////////////////Function for Deducting Health////////////////////////////////////////////////////          
+          $('#play_button').click(function(){
+            console.log("something")
+            if(event){
+           newPlay.health = (newPlay.health)-(orc.weapon.damage)
+           orc.health = (orc.health)-(newPlay.weapon.damage)
+           console.log("Player:" + newPlay.health , "Orc:" + orc.health)
+            if(newPlay.health===0 || orc.health === 0){
+              $('#play_button').unbind()
+            }
+            }
+            
+          })
           break;
       }
       console.log("newPlay Value when next page btn click", newPlay);
