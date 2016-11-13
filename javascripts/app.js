@@ -140,10 +140,10 @@ var Gauntlet = (function(Gauntlet) {
               console.log("Player:" + newPlay.health, "Orc:" + orc.health)
               if (newPlay.health <= 0) {
                 $('#play_button').unbind().disabled = true;
-                alert("KO! ORC WINS!");
+                $("#playerWins").html("K.O.! ORC WINS!");
               } else if (orc.health <= 0) {
                 $('#play_button').unbind().disabled = true;
-                alert("KO! " + newPlay.playerName + " WINS!");
+                $("#playerWins").html("K.O.! " + newPlay.playerName + " WINS!");
               }
             }
 
