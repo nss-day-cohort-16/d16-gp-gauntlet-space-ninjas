@@ -119,7 +119,7 @@ var Gauntlet = (function(Gauntlet) {
                                       <h5 class="card-subtitle text-muted">Class: ${newPlay.class}</h5>
                                       <p class="card-text">Weapon: ${newPlay.weapon}</p>
                                       <p class="card-text">Weapon Damage: ${newPlay.weapon.damage}</p>
-                                      <p class="card-text">Health: ${newPlay.health}</p>
+                                      <p class="card-text playerHealth">Health: ${newPlay.health}</p>
                                       </div> <img src="/images/Ninja.png" alt="Card image">`)
 
             //----------------------------------- Adding Enemy Card to DOM ------------------------------------//
@@ -128,7 +128,7 @@ var Gauntlet = (function(Gauntlet) {
                                       <h5 class="card-subtitle text-muted">Class: ${orc.class}</h5>
                                       <p class="card-text">Weapon: ${orc.weapon}</p>
                                       <p class="card-text">Weapon Damage: ${orc.weapon.damage}</p>
-                                      <p class="card-text">Health: ${orc.health}</p>
+                                      <p class="card-text orcHealth">Health: ${orc.health}</p>
                                       </div> <img src="/images/Ninja-Free-Download-PNG.png" alt="Card image">`)
 
             //------------------------------ Function for Deducting Health ---------------------------//          
@@ -136,14 +136,18 @@ var Gauntlet = (function(Gauntlet) {
             console.log("something")
             if (event) {
               newPlay.health = (newPlay.health) - (orc.weapon.damage)
+              $(".playerHealth").html("Health:" + newPlay.health);
               orc.health = (orc.health) - (newPlay.weapon.damage)
-              console.log("Player:" + newPlay.health, "Orc:" + orc.health)
+              $(".orcHealth").html("Health:" + orc.health);
+              // console.log("Player:" + newPlay.health, "Orc:" + orc.health)
               if (newPlay.health <= 0) {
                 $('#play_button').unbind().disabled = true;
                 $("#playerWins").html("K.O.! ORC WINS!");
+                $(".playerHealth").html("Health: 0");
               } else if (orc.health <= 0) {
                 $('#play_button').unbind().disabled = true;
                 $("#playerWins").html("K.O.! " + newPlay.playerName + " WINS!");
+                $(".orcHealth").html("Health: 0");
               }
             }
 
