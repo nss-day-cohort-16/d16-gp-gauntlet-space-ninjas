@@ -314,6 +314,21 @@ p.card-text {
   z-index: 9; }
 
 .centered {
-  margin: 0 auto; }
+  margin: 0 auto; 
+} 
+
+ .nick {
+  animation-name: nick;
+  animation-duration: 100ms;
+  animation-iteration-count: 1;
+
+}
+
+@keyframes nick {
+    from {background-color: black;}
+    to {background-color: white;}
+    from {color: black;}
+    to {color: white;}
+}
 
 /*# sourceMappingURL=gauntlet.css.map */

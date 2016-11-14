@@ -16,6 +16,11 @@ var play3 = function () {
   audio.play("/audio/Cheering%202-SoundBible.com-457490617.mp3");
 }
 
+function play4() {
+  var audio = document.getElementById("audio4");
+  audio.play("/audio/vo_anno_fight01.wav");
+} 
+
 $(document).ready(function() {
   $("#my_audio").get(0).play();
 
@@ -25,3 +30,13 @@ function setHalfVolume() {
   var myAudio = document.getElementById("my_audio");
   myAudio.volume = 0.5; //Changed this to 0.5 or 50% volume since the function is called Set Half Volume ;)
 }
+
+
+$('.seizure').on('click', function(e) {
+  $('#messageArea').addClass('nick');
+  var millisecondsToWait = 100;
+  setTimeout(function() {
+    $('#messageArea').removeClass('nick');
+  }, millisecondsToWait);
+
+});
