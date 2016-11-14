@@ -7,7 +7,6 @@
   <link href='https://fonts.googleapis.com/css?family=Lato:400,300,700' rel='stylesheet' type='text/css'>
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
   <!-- <link rel="stylesheet" href="/lib/node_modules/grunt-bootstrap/out/css/bootstrap.min.css"> -->
-
   <link rel="stylesheet" type="text/css" href="styles/gauntlet.css">
   <!-- <link href='http://fonts.googleapis.com/css?family=Lato:300,400,700' rel='stylesheet' type='text/css'> -->
 </head>
@@ -18,7 +17,7 @@
   <div id='stars3'></div>
   <article id="game-container">
     <section id="player-setup" class="card card--name">
-    <h1>SPACE NINJAS IN SPACE</h1>
+      <h1>SPACE NINJAS IN SPACE</h1>
       <div class="card__prompt">
         <div class="texter">RECORD YOUR NAME, NINJA!</div>
         <div class="field">
@@ -67,6 +66,8 @@
                 <span id="Kōga" class="btn__text">Kōga</span>
               </a>
             </div>
+          </div>
+          <div class="col-sm-4">
             <div class="card__button">
               <a class="class__link btn btn--big btn--yellow" href="#">
                 <span class="btn__prompt">></span>
@@ -75,6 +76,7 @@
             </div>
           </div>
         </div>
+      </div>
       </div>
       <div id="something" class="card__button">
         <a class="card__link btn btn--big btn--orange clicky" href="#" next="card--weapon">
@@ -96,25 +98,31 @@
       </div>
       <div class="container-fluid">
         <div class="row weaponDiv">
-          <div class="col-sm-4">
+          <div class="col-sm-4 centered">
             <div class="card__button">
               <a class="class__link btn btn--big btn--blue" href="#">
                 <span class="btn__prompt">></span>
                 <span id="Throwing Star" class="btn__text">Throwing Star</span>
               </a>
             </div>
+          </div>
+          <div class="col-sm-4">
             <div class="card__button">
               <a class="class__link btn btn--big btn--blue" href="#">
                 <span class="btn__prompt">></span>
                 <span id="Night Blade" class="btn__text">Night Blade</span>
               </a>
             </div>
+          </div>
+          <div class="col-sm-4">
             <div class="card__button">
               <a class="class__link btn btn--big btn--blue" href="#">
                 <span class="btn__prompt">></span>
                 <span id="Dual Blades" class="btn__text">Dual Blades</span>
               </a>
             </div>
+          </div>
+          <div class="col-sm-4">
             <div class="card__button">
               <a class="class__link btn btn--big btn--yellow" href="#">
                 <span class="btn__prompt">></span>
@@ -123,6 +131,7 @@
             </div>
           </div>
         </div>
+      </div>
       </div>
       <div class="card__button">
         <a class="card__link btn btn--big btn--orange clicky" href="#" next="card--battleground">
@@ -133,10 +142,9 @@
     </section>
     <!-- BATTLEGROUND PAGE -->
     <section id="battleground" class="card card--battleground">
-     <audio loop autoplay>
-        <source src="/audio/Space%20Lounge%20Loop.wav">
+      <audio id="my_audio" loop="loop" onloadeddata="setHalfVolume()">
+        <source src="/audio/Space%20Lounge%20Loop.wav" type="audio/mp3">
       </audio>
-
       <div id='title' class='blink blink-furiously blink-5'>
         <br>
         <span>
@@ -144,26 +152,30 @@
 SPACE NINJAS BATTLE!!
 
   </span>
-      <div id="playerWins"></div>
+        <div id="playerWins"></div>
       </div>
       <div class="playercard">
       </div>
       </div>
       <div class="playercard2">
         <div class="card__button">
-          <a id="play_button" class="btn btn--sm btn--orange" href="#" next="#">Attack!
+          <a id="play_button" class="btn btn--sm btn--orange" href="#" next="#" value="PLAY" onclick="play()">Attack!
+           <audio id="audio" src="/audio/slap.mp3" ></audio>
+          <audio id="audio2" src="/audio/vo_anno_you_suck.wav" ></audio>
+          <audio id="audio3" src="/audio/Cheering%202-SoundBible.com-457490617.mp3" ></audio>
+
           </a>
         </div>
       </div>
-
   </article>
   <script src="http://code.jquery.com/jquery-1.11.2.min.js"></script>
-  <script src="/lib/node_modules/grunt-bootstrap/out/js/bootstrap.min.js"></script>
+  <!-- <script src="/lib/node_modules/grunt-bootstrap/out/js/bootstrap.min.js"></script> -->
   <script src="javascripts/classes.js"></script>
   <script src="javascripts/player.js"></script>
   <script src="javascripts/enemies.js"></script>
   <script src="javascripts/weapons.js"></script>
   <script src="javascripts/spells.js"></script>
+  <script src="javascripts/audio.js"></script>
   <script src="javascripts/app.js"></script>
 </body>
 
