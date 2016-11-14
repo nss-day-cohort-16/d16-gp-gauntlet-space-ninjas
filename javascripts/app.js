@@ -144,6 +144,7 @@ var Gauntlet = (function(Gauntlet) {
                 $(".orcHealth").html("Health: 0");
                 newPlay.health = (newPlay.health) + (orc.weapon.damage);
                 $(".playerHealth").html("Health: " + newPlay.health);
+                play3();
 
               } else if (newPlay.health <= 0 && orc.health > newPlay.health) {
                 $('#play_button').unbind().disabled = true;
@@ -151,12 +152,15 @@ var Gauntlet = (function(Gauntlet) {
                 $(".playerHealth").html("Health: 0");
                 // orc.health = (orc.health) + (newPlay.weapon.damage);
                 // $(".orcHealth").html("Health: " + orc.health);
+                play2();
+                
               } else if (newPlay.health <= 0 && newPlay.health === orc.health) {
                  $('#play_button').unbind().disabled = true;
                 $("#playerWins").html("K.O.! " + newPlay.playerName + " WINS!");
                 $(".orcHealth").html("Health: 0");
                 newPlay.health = (newPlay.health) + (orc.weapon.damage);
                 $(".playerHealth").html("Health: " + newPlay.health);
+                play3();
               }
             }
 
