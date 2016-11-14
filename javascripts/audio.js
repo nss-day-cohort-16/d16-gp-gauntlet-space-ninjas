@@ -1,17 +1,17 @@
 "use strict";
 
-function play() {
+var play = function () {
   var audio = document.getElementById("audio");
   audio.play("/audio/slap.mp3");
 }
 
-function play2() {
+var play2 = function () {
   var audio = document.getElementById("audio2");
   audio.play("/audio/vo_anno_you_suck.wav");
 }
 
 
-function play3() {
+var play3 = function () {
   var audio = document.getElementById("audio3");
   audio.play("/audio/Cheering%202-SoundBible.com-457490617.mp3");
 }
