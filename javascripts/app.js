@@ -37,9 +37,9 @@ var Gauntlet = (function(Gauntlet) {
         newPlay.class = new Gauntlet.GuildHall.Shinsengumi();
         console.log("newPlay-Case: Shinsengumi", newPlay);
         break;
-      case "Kōga":
-        newPlay.Kōga = new Gauntlet.GuildHall.Kōga();
-        console.log("newPlay-Case: Thief", newPlay);
+      case "Koga":
+        newPlay.class = new Gauntlet.GuildHall.Koga();
+        console.log("newPlay-Case: Koga", newPlay);
         // newPlay.class = Gauntlet.GuildHall.allowedClasses[Warrior];
         break;
       case "surprise-me-class":

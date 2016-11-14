@@ -39,15 +39,6 @@ var Gauntlet = (function(Gauntlet) {
   };
   Gauntlet.GuildHall.Shinobi.prototype = new Gauntlet.GuildHall.Fighter();
 
-
-  Gauntlet.GuildHall.Valkyrie = function() {
-    this.name = "Valkyrie";
-    this.healthBonus = this.healthBonus + 20;
-    this.strengthBonus = this.strengthBonus + 10;
-  };
-  Gauntlet.GuildHall.Valkyrie.prototype = new Gauntlet.GuildHall.Fighter();
-
-
   Gauntlet.GuildHall.Berserker = function() {
     this.name = "Berserker";
     this.healthBonus = this.healthBonus + 35;

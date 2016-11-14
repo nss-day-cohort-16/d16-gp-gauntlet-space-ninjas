@@ -79,7 +79,7 @@ var Gauntlet = (function(Gauntlet) {
     randomSkin = Math.round(Math.random() * (this.skinColors.length - 1));
     this.skinColor = this.skinColors[randomSkin];
 
-    this.allowedClasses = ["Warrior", "Berserker", "Valkyrie", "Thief"];
+    this.allowedClasses = ["Warrior", "Berserker", "Shaman"];
   };
   Gauntlet.Combatants.Human.prototype = new Gauntlet.Combatants.Player();
 
