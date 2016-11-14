@@ -11,7 +11,7 @@ var Gauntlet = (function(Gauntlet) {
   //---------------- BAD GUY --------------------//
   var orc = new Gauntlet.Combatants.Orc();
   orc.generateClass();
-  orc.name = "Randal";
+  orc.playerName = "Randal";
   orc.setWeapon(new nightBlade());
   // console.log(orc.toString());
 
@@ -120,7 +120,7 @@ var Gauntlet = (function(Gauntlet) {
 
             //----------------------------------- Adding Enemy Card to DOM ------------------------------------//
           $('.playercard2').append(`<div class="card-block">
-                                      <h4 class="card-title">${orc.name}</h4>
+                                      <h4 class="card-title">${orc.playerName}</h4>
                                       <h5 class="card-subtitle text-muted">Class: ${orc.class}</h5>
                                       <p class="card-text">Weapon: ${orc.weapon}</p>
                                       <p class="card-text">Weapon Damage: ${orc.weapon.damage}</p>
@@ -140,7 +140,7 @@ var Gauntlet = (function(Gauntlet) {
 
               if (newPlay.health <= 0 && orc.health > newPlay.health) {
                 $('#play_button').unbind().disabled = true;
-                $("#playerWins").html("K.O.! ORC WINS!");
+                $("#playerWins").html('K.O.! Randal WINS!');
                 // $(".playerHealth").html("Health: 0");
                 // orc.health = (orc.health) + (newPlay.weapon.damage);
                 // $(".orcHealth").html("Health: " + orc.health);
