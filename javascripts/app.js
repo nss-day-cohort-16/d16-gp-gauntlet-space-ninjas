@@ -131,22 +131,17 @@ var Gauntlet = (function(Gauntlet) {
           $('#play_button').click(function(event) {
             console.log("something");
             if (event) {
-              newPlay.health = (newPlay.health) - (orc.weapon.damage);
-              $(".playerHealth").html("Health: " + newPlay.health);
 
               orc.health = (orc.health) - (newPlay.weapon.damage);
               $(".orcHealth").html("Health: " + orc.health);
               // console.log("Player:" + newPlay.health, "Orc:" + orc.health)
 
-              if (orc.health <= 0 && newPlay.health > orc.health) {
-                $('#play_button').unbind().disabled = true;
-                $("#playerWins").html("K.O.! " + newPlay.playerName + " WINS!");
-                $(".orcHealth").html("Health: 0");
-                newPlay.health = (newPlay.health) + (orc.weapon.damage);
-                $(".playerHealth").html("Health: " + newPlay.health);
-                play3();
+              if (orc.health > 0) {
 
-              } else if (newPlay.health <= 0 && orc.health > newPlay.health) {
+                newPlay.health = (newPlay.health) - (orc.weapon.damage);
+                $(".playerHealth").html("Health: " + newPlay.health);
+
+              } else if (newPlay.health <= 0) {
                 $('#play_button').unbind().disabled = true;
                 $("#playerWins").html('K.O.! Randal WINS!');
                 $(".playerHealth").html("Health: 0");
@@ -154,22 +149,12 @@ var Gauntlet = (function(Gauntlet) {
                 // $(".orcHealth").html("Health: " + orc.health);
                 play2();
 
-              } else if (newPlay.health <= 0 && newPlay.health === orc.health) {
+              } else {
                  $('#play_button').unbind().disabled = true;
                 $("#playerWins").html("K.O.! " + newPlay.playerName + " WINS!");
                 $(".orcHealth").html("Health: 0");
-                newPlay.health = (newPlay.health) + (orc.weapon.damage);
-                $(".playerHealth").html("Health: " + newPlay.health);
                 play3();
 
-              } else if (newPlay.health <= 0 && orc.health <= 0) {
-                 $('#play_button').unbind().disabled = true;
-                $("#playerWins").html("K.O.! " + newPlay.playerName + " WINS!");
-                $(".orcHealth").html("Health: 0");
-                newPlay.health = (newPlay.health) + (orc.weapon.damage);
-                $(".playerHealth").html("Health: " + newPlay.health);
-
-                play3();
               }
             }
 
