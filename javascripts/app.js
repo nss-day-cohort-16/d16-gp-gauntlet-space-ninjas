@@ -118,7 +118,7 @@ var Gauntlet = (function(Gauntlet) {
                                       <p class="card-text playerHealth">Health: ${newPlay.health}</p>
                                       </div> <img src="/images/Ninja.png" alt="Card image">`);
 
-          //----------------------------------- Adding Enemy Card to DOM ------------------------------------//
+            //----------------------------------- Adding Enemy Card to DOM ------------------------------------//
           $('.playercard2').append(`<div class="card-block">
                                       <h4 class="card-title">${orc.playerName}</h4>
                                       <h5 class="card-subtitle text-muted">Class: ${orc.class}</h5>
@@ -127,7 +127,7 @@ var Gauntlet = (function(Gauntlet) {
                                       <p class="card-text orcHealth">Health: ${orc.health}</p>
                                       </div> <img src="/images/Ninja-Free-Download-PNG.png" alt="Card image">`);
 
-          //------------------------------ Function for Deducting Health ---------------------------//
+            //------------------------------ Function for Deducting Health ---------------------------//
           $('#play_button').click(function(event) {
             console.log("something");
             if (event) {
@@ -138,22 +138,25 @@ var Gauntlet = (function(Gauntlet) {
               $(".orcHealth").html("Health: " + orc.health);
               // console.log("Player:" + newPlay.health, "Orc:" + orc.health)
 
-              if (newPlay.health <= 0 && orc.health > newPlay.health) {
-                $('#play_button').unbind().disabled = true;
-                $("#playerWins").html('K.O.! Randal WINS!');
-                $(".playerHealth").html("Health: 0");
-                // orc.health = (orc.health) + (newPlay.weapon.damage);
-                // $(".orcHealth").html("Health: " + orc.health);
-                var play2;
-                play2(); //audio
-              } else if (orc.health <= 0 && newPlay.health > orc.health) {
+              if (orc.health <= 0 && newPlay.health > orc.health) {
                 $('#play_button').unbind().disabled = true;
                 $("#playerWins").html("K.O.! " + newPlay.playerName + " WINS!");
                 $(".orcHealth").html("Health: 0");
                 newPlay.health = (newPlay.health) + (orc.weapon.damage);
                 $(".playerHealth").html("Health: " + newPlay.health);
-                var play3;
-                play3(); //audio
+
+              } else if (newPlay.health <= 0 && orc.health > newPlay.health) {
+                $('#play_button').unbind().disabled = true;
+                $("#playerWins").html('K.O.! Randal WINS!');
+                $(".playerHealth").html("Health: 0");
+                // orc.health = (orc.health) + (newPlay.weapon.damage);
+                // $(".orcHealth").html("Health: " + orc.health);
+              } else if (newPlay.health <= 0 && newPlay.health === orc.health) {
+                 $('#play_button').unbind().disabled = true;
+                $("#playerWins").html("K.O.! " + newPlay.playerName + " WINS!");
+                $(".orcHealth").html("Health: 0");
+                newPlay.health = (newPlay.health) + (orc.weapon.damage);
+                $(".playerHealth").html("Health: " + newPlay.health);
               }
             }
 
