@@ -143,16 +143,50 @@ var Gauntlet = (function(Gauntlet) {
 
               } else if (newPlay.health <= 0) {
                 $('#play_button').unbind().disabled = true;
+                $('#play_button').hide();
                 $("#playerWins").html('K.O.! Randal WINS!');
                 $(".playerHealth").html("Health: 0");
                 // orc.health = (orc.health) + (newPlay.weapon.damage);
                 // $(".orcHealth").html("Health: " + orc.health);
+                 $('#warp').html(`<div class="scene">
+                    <div class="wrap">
+                        <div class="wall wall-right"></div>
+                        <div class="wall wall-left"></div>
+                        <div class="wall wall-top"></div>
+                        <div class="wall wall-bottom"></div>
+                        <div class="wall wall-back"></div>
+                    </div>
+                    <div class="wrap">
+                        <div class="wall wall-right"></div>
+                        <div class="wall wall-left"></div>
+                        <div class="wall wall-top"></div>
+                        <div class="wall wall-bottom"></div>
+                        <div class="wall wall-back"></div>
+                    </div>
+                  </div>`)
                 play2();
 
               } else {
                  $('#play_button').unbind().disabled = true;
+                 $('#play_button').hide();
                 $("#playerWins").html("K.O.! " + newPlay.playerName + " WINS!");
                 $(".orcHealth").html("Health: 0");
+                 $('#warp').html(`<div class="scene">
+                    <div class="wrap">
+                        <div class="wall wall-right"></div>
+                        <div class="wall wall-left"></div>
+                        <div class="wall wall-top"></div>
+                        <div class="wall wall-bottom"></div>
+                        <div class="wall wall-back"></div>
+                    </div>
+                    <div class="wrap">
+                        <div class="wall wall-right"></div>
+                        <div class="wall wall-left"></div>
+                        <div class="wall wall-top"></div>
+                        <div class="wall wall-bottom"></div>
+                        <div class="wall wall-back"></div>
+                    </div>
+                  </div>`)
                 play3();
 
               }
