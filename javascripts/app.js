@@ -70,7 +70,7 @@ var Gauntlet = (function(Gauntlet) {
         console.log("newPlay-Case: Dual Blades", newPlay);
         break;
       case "surprise-me-weapon":
-        newPlay.setWeapon(new nightBlade()); //---------------------------> Need to create generateWeapon(); 
+        newPlay.setWeapon(new nightBlade()); //---------------------------> Need to create generateWeapon();
         console.log("newPlay-Case: Random Weapon", newPlay);
         // newPlay.class = Gauntlet.GuildHall.allowedClasses[Warrior];
         break;
@@ -78,10 +78,6 @@ var Gauntlet = (function(Gauntlet) {
   });
 
   //------------------------------- SPELL STUFF ------------------------------------//
-
-  var spell = new Gauntlet.SpellBook.Sphere();
-  // console.log("spell: ", spell.toString());
-  // console.log("Gauntlet: ", Gauntlet);
 
   var spell = new Gauntlet.SpellBook.Sphere();
   // console.log("spell: ", spell.toString());
@@ -131,8 +127,8 @@ var Gauntlet = (function(Gauntlet) {
                                       <p class="card-text orcHealth">Health: ${orc.health}</p>
                                       </div> <img src="/images/Ninja-Free-Download-PNG.png" alt="Card image">`);
 
-            //------------------------------ Function for Deducting Health ---------------------------//          
-          $('#play_button').click(function() {
+            //------------------------------ Function for Deducting Health ---------------------------//
+          $('#play_button').click(function(event) {
             console.log("something");
             if (event) {
               newPlay.health = (newPlay.health) - (orc.weapon.damage);
