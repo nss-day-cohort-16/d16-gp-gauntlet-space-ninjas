@@ -11,7 +11,7 @@
   <!-- <link href='http://fonts.googleapis.com/css?family=Lato:300,400,700' rel='stylesheet' type='text/css'> -->
 </head>
 
-<body>
+<body id="messageArea">
   <div id='stars'></div>
   <div id='stars2'></div>
   <div id='stars3'></div>
@@ -132,11 +132,11 @@
           </div>
         </div>
       </div>
-      </div>
+      </div> 
       <div class="card__button">
         <a class="card__link btn btn--big btn--orange clicky" href="#" next="card--battleground">
           <span class="btn__prompt">></span>
-          <span class="btn__text">defeat your enemies</span>
+          <span class="btn__text" value="PLAY" onclick="play4()">defeat your enemies</span>
         </a>
       </div>
     </section>
@@ -159,10 +159,11 @@ SPACE NINJAS BATTLE!!
       </div>
       <div class="playercard2">
         <div class="card__button">
-          <a id="play_button" class="btn btn--sm btn--orange" href="#" next="#" value="PLAY" onclick="play()">Attack!
+          <a id="play_button" class="btn btn--sm btn--orange seizure" href="#" next="#" value="PLAY" onclick="play()">Attack!
            <audio id="audio" src="/audio/slap.mp3" ></audio>
           <audio id="audio2" src="/audio/vo_anno_you_suck.wav" ></audio>
           <audio id="audio3" src="/audio/Cheering%202-SoundBible.com-457490617.mp3" ></audio>
+          <audio id="audio4" src="/audio/vo_anno_fight01.wav" ></audio>
 
           </a>
         </div>
